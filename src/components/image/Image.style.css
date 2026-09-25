@@ -1,0 +1,10 @@
+.image {
+  height: 200px;
+}
+@media (max-width: 400px) {
+  .image {
+    height: 120px;
+  }
+}
+
+/*# sourceMappingURL=Image.style.css.map */

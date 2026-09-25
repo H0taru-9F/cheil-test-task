@@ -1,0 +1,23 @@
+.price {
+  font-family: var(--sans);
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+}
+.price__decimal {
+  font-size: 18px;
+  font-weight: 700;
+  vertical-align: super;
+  margin-left: 2px;
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.price__currency {
+  line-height: 1;
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+/*# sourceMappingURL=Price.style.css.map */
