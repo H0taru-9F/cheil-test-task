@@ -1,8 +1,12 @@
 import './Search.style.scss'
 
-export default function Search() {
+type SearchProps = {
+  onSearch: (searchTerm: string) => void;
+}
+
+export default function Search({onSearch}:SearchProps) {
   return (
-      <input className="search" placeholder="Search..." />
+      <input className="search" placeholder="Search..." onChange={(e) => onSearch(e.target.value)}/>
   )
 }
 

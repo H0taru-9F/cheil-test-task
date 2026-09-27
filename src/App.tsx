@@ -8,11 +8,18 @@ import {data, type Landry} from "@/data/landry.ts";
 function App() {
     const [filteredProducts, setFilteredProducts] = useState<Landry[]>(data);
 
+    const handleSearch = (searchTerm: string) => {
+        const result = data.filter(product =>
+            product.model.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setFilteredProducts(result);
+    };
+
   return (
     <>
       <Header/>
       <div className='container'>
-        <Search/>
+        <Search onSearch={handleSearch}/>
           <Filters products={data} onFilter={setFilteredProducts}/>
           <Cards products={filteredProducts}/>
       </div>
