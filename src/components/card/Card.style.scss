@@ -4,6 +4,14 @@
   border-radius: 16px;
   max-width: 338px;
 
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    flex-shrink: 0;
+    align-self: center;
+  }
+
   &__details {
     text-align: left;
 
@@ -16,10 +24,12 @@
   }
 
   &__price-per-month {
-    margin-top: 14px;
+    margin-bottom: 14px;
   }
 
   &__button {
-    margin-top: 16px;
+    margin-top: auto;
+    align-self: center;
+
   }
 }

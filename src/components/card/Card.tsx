@@ -9,11 +9,13 @@ import Description from "@/components/card/description/Description.tsx";
 
 export default function Card({ data, isSelected, onSelect }: CardProps) {
 
-  const pricePerMonth = data.installments.isAvailable ? `${(data.price / data.installments.monthsCount).toFixed(2)} zł x ${data.installments.monthsCount} rat` : null;
+    const isMonthPayment = data.installments.isAvailable
+
+  const pricePerMonth = isMonthPayment ? `${(data.price / data.installments.monthsCount).toFixed(2)} zł x ${data.installments.monthsCount} rat` : null;
 
   return (
     <div className="card">
-      <Image src={data.image} alt={`${data.model} ${data.series}`} />
+      <Image src={data.image} alt={`${data.model} ${data.series}`} className='card__image' />
         <div className="card__details">
       <Text fontWeight='bold'>{data.model}, {data.series}, {data.capacity}, {data.color}</Text>
       <br />
@@ -25,11 +27,11 @@ export default function Card({ data, isSelected, onSelect }: CardProps) {
       <Text grayColor variant='caption' as="span">Cena obowiązuje: {data.priceValid.startDate} - {data.priceValid.endDate}</Text>
         <br/>
         <Price value={data.price} currency={data.currency} />
-      {data.installments.isAvailable && (
+      {isMonthPayment && (
         <Text className="card__price-per-month" grayColor fontWeight='bold'>{pricePerMonth}</Text>
       )}
         </div>
-      <Button isSelected={isSelected} onClick={() => onSelect(data.id)} selectedContent='Wybrane' className="card__button">wybierz</Button>
+      <Button isSelected={isSelected} onClick={() => onSelect(data.id)} selectedContent='Wybrane' className='card__button'>wybierz</Button>
     </div>
   )
 }

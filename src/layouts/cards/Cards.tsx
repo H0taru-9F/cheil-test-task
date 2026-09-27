@@ -40,14 +40,16 @@ export default function Cards({products}:CardsProps) {
             <Card key={card.id} data={card} isSelected={selectedIds.has(card.id)} onSelect={toggle} />
           ))}
         </div>
-        <Button selectedContent='Pokaż mniej' isSelected={isShowedAllCards} className='cards__button' onClick={() => setIsShowedAllCards(!isShowedAllCards)} variant="secondary"
-                icon={{
-                    position: 'right',
-                    icon: <ArrowIcon direction={!isShowedAllCards ? 'down' : 'up'} />
-                }}
-        >
-          Pokaż więcej
-        </Button>
+          {products.length > 6 &&
+              <Button selectedContent='Pokaż mniej' isSelected={isShowedAllCards} className='cards__button' onClick={() => setIsShowedAllCards(!isShowedAllCards)} variant="secondary"
+                      icon={{
+                          position: 'right',
+                          icon: <ArrowIcon direction={!isShowedAllCards ? 'down' : 'up'} />
+                      }}
+              >
+                  Pokaż więcej
+              </Button>
+          }
       </>
   );
 }
