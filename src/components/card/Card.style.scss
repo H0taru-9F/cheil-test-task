@@ -1,7 +1,6 @@
 .card{
   padding: 25px 24px;
   background-color: #fff;
-  border: 1px solid #ccc;
   border-radius: 16px;
   max-width: 338px;
 
@@ -13,5 +12,14 @@
     display: flex;
     align-items: center;
     gap: 9px;
+    margin: 14px 0;
+  }
+
+  &__price-per-month {
+    margin-top: 14px;
+  }
+
+  &__button {
+    margin-top: 16px;
   }
 }

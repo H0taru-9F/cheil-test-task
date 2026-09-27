@@ -2,7 +2,21 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px 16px;
+  max-width: 1200px;
+}
+.cards__wraper {
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+.cards__description {
+  text-align: left;
+}
+.cards {
   justify-content: center;
+}
+.cards__button {
+  margin: 20px;
 }
 
 /*# sourceMappingURL=Cards.style.css.map */

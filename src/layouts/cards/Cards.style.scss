@@ -2,6 +2,18 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px 16px;
+  max-width: 1200px;
 
-justify-content: center;
+  &__wraper{
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  &__description{
+    text-align: left;
+  }
+  justify-content: center;
+  &__button{
+    margin: 20px
+  }
 }

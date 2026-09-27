@@ -13,7 +13,7 @@ export default function Price({ value, currency }: PriceProps) {
     const [whole, decimal] = formatted.split(',');
 
     return (
-        <Text as="span" variant="heading" fontWeight='bold'>
+        <Text as="span" variant="heading1" fontWeight='bold'>
             {whole}
             <sup className="price__decimal">
                 {decimal??'00'}

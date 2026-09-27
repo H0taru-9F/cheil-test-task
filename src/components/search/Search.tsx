@@ -1,8 +1,8 @@
+import './Search.style.scss'
+
 export default function Search() {
   return (
-    <div className="flex flex-row items-center">
-      <input className="border border-gray-300 rounded-md p-2 w-full" placeholder="Search..." />
-    </div>
+      <input className="search" placeholder="Search..." />
   )
 }
 

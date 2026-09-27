@@ -4,4 +4,5 @@ export type FilterProps = {
     label: string;
     placeholder: string;
     options: string[];
+    allLabel: string;
 }
